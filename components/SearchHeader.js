@@ -3,16 +3,17 @@ import { useRouter } from "next/router";
 import { useRef } from "react";
 import { MicrophoneIcon, SearchIcon, XIcon } from "@heroicons/react/solid";
 import User from "./User";
+import SearchHeaderOptions from "./SearchHeaderOptions";
 
 export default function SearchHeader() {
   const router = useRouter();
-    const searchInputRef = useRef(null);
-    function search(event) {
-        event.preventDefault();
-        const term = searchInputRef.current.value;
-        if (!term.trim()) return;
-        router.push(`/search?term=${term.trim()}`)
-    }
+  const searchInputRef = useRef(null);
+  function search(event) {
+    event.preventDefault();
+    const term = searchInputRef.current.value;
+    if (!term.trim()) return;
+    router.push(`/search?term=${term.trim()}&searchType=`);
+  }
   return (
     <header className="sticky top-0 bg-white">
       <div className="flex w-full p-6 items-center">
@@ -37,15 +38,12 @@ export default function SearchHeader() {
             onClick={() => (searchInputRef.current.value = "")}
           />
           <MicrophoneIcon className="h-6 hidden sm:inline-flex text-blue-500 pl-4 border-l-2 border-gray-300 mr-3" />
-                  <SearchIcon className="h-6 hidden sm:inline-flex text-blue-500" />
-                  <button
-                      onClick={search}
-                      type="submit"
-                      hidden>
-                      </button>
+          <SearchIcon className="h-6 hidden sm:inline-flex text-blue-500" />
+          <button onClick={search} type="submit" hidden></button>
         </form>
         <User className="ml-auto whitespace-nowrap" />
       </div>
+      <SearchHeaderOptions/>
     </header>
   );
 }
