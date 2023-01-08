@@ -1,5 +1,6 @@
 import React from "react";
 import Parser from "html-react-parser";
+import PaginationButtons from "./PaginationButtons";
 
 export default function SearchResults({ results }) {
   return (
@@ -14,7 +15,10 @@ export default function SearchResults({ results }) {
             <a className="text-sm truncate" href={result.link}>
               {result.formattedUrl}
             </a>
-            <a className="group-hover:underline decoration-blue-800" href={result.link}>
+            <a
+              className="group-hover:underline decoration-blue-800"
+              href={result.link}
+            >
               <h2 className="truncate text-xl font-medium text-blue-800 ">
                 {result.title}
               </h2>
@@ -23,6 +27,7 @@ export default function SearchResults({ results }) {
           <p className="text-gray-600">{Parser(result.htmlSnippet)}</p>
         </div>
       ))}
+      <PaginationButtons />
     </div>
   );
 }
