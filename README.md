@@ -25,10 +25,10 @@ Click to see [Live Demo](https://google-clone-v4.vercel.app/)
 
 
 # Technologies
-#### React.JS
-#### Next.JS
-#### NextAuth.JS
-#### Tailwind CSS
+- React.JS
+- Next.JS
+- NextAuth.JS
+- Tailwind CSS
 
 # Features
 #### include web and image search
