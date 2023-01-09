@@ -10,8 +10,6 @@ npm install
 
 npm run dev
 
-Open http://localhost:3000 with your browser to see the result.
-
-[Live Demo](https://google-clone-v4.vercel.app/)
+Open http://localhost:3000 with your browser to see the result or [Live Demo](https://google-clone-v4.vercel.app/)
 
 # Screen Shoot
