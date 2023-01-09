@@ -31,7 +31,7 @@ Click to see [Live Demo](https://google-clone-v4.vercel.app/)
 - Tailwind CSS
 
 # Features
-- include web and image search
+- Include web and image search
 - The daily query is limited to 100 by the Google API.
 - Authentication with next-auth
 - Pagination
