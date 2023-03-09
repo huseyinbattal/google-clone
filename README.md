@@ -1,4 +1,4 @@
-# Google clone using Next.js and Tailwind CSS
+# Google Clone
 
 ## Screen Shoot
 
